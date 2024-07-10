@@ -3,7 +3,7 @@ import { Input } from "@nextui-org/input";
 import { cluster } from "radash";
 import { useEffect, useState } from "react";
 
-export const RenderElementForLearnNonObserver = ({
+const RenderElementForLearnNonObserver = ({
   contents,
 }: {
   contents: any[];
