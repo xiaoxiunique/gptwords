@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+
 import result from "./result.json";
 
 export async function GET(req: NextRequest) {
@@ -11,7 +12,9 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  const gptWord = (result as any[]).find((item) => item.word.toLowerCase() === word.toLowerCase());
+  const gptWord = (result as any[]).find(
+    (item) => item.word.toLowerCase() === word.toLowerCase(),
+  );
 
   return NextResponse.json({
     message: "Hello World",

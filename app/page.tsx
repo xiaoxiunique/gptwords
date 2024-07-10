@@ -12,7 +12,7 @@ const RenderElementForLearnNonObserver = ({
     // @ts-ignore
     <div className="relative flex justify-center bg-gray-200 opacity-90 w-full h-[600px] sm:w-[375px]">
       <div className="z-40 flex flex-col justify-around w-full p-8">
-      {contents.map((item, index) => {
+        {contents.map((item, index) => {
           return (
             <div key={index} className={"mt-4 border-2 flex flex-col"}>
               <div className={"text-xl flex"}>{item.title}</div>
@@ -84,7 +84,7 @@ export default function Page() {
           return;
         }
         setData(data.data);
-      })
+      }),
     );
   }
 
@@ -97,10 +97,10 @@ export default function Page() {
   return (
     <section>
       <div>
-        <Input value={word} onChange={
-          (e) => setWord(e.target.value)
-        } />
-        <div className="font-sans text-3xl font-bold opacity-0 sm:opacity-100">{word}</div>
+        <Input value={word} onChange={(e) => setWord(e.target.value)} />
+        <div className="font-sans text-3xl font-bold opacity-0 sm:opacity-100">
+          {word}
+        </div>
         <div className="flex flex-col justify-between gap-2 mt-4 rounded-md sm:flex-row sm:flex-wrap md:border-2 md:border-black sm:justify-center sm:m-4 sm:p-4">
           {blocks.map((block, index) => {
             return (
