@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 import result from "./result.json";
 
+export const runtime = "edge";
+
 export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const word = url.searchParams.get("word");
